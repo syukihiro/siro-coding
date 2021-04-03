@@ -1,0 +1,579 @@
+body {
+  margin: 0;
+  font-family: Myriad Pro, sans-serif;
+  font-size: 16px;
+  color: #2b2b2b;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #2b2b2b;
+}
+
+.content-wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@mixin bottomline {
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 75px;
+    left: 50%;
+    width: 40px;
+    height: 1px;
+    background: #2b2b2b;
+    transform: translateX(-50%);
+  }
+}
+
+@mixin sectionTitle {
+  width: 100%;
+  height: 51px;
+  margin: 0 auto;
+  font: normal normal bold 36px/55px Poppins;
+}
+
+@mixin sectionDetail {
+  height: 70px;
+  max-width: 576px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 57px;
+}
+
+@mixin flowerText {
+  text-align: left;
+  font: normal normal normal 16px/28px Myriad Pro;
+}
+
+header {
+  width: 100%;
+  height: 620px;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/header.png) 50%;
+  background-size: cover;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  .content-wrapper {
+    .title {
+      h1 {
+        font-size: 120px;
+        font-weight: normal;
+      }
+    }
+    h2 {
+      font-size: 16px;
+      font-weight: normal;
+    }
+  }
+}
+
+.header {
+  max-width: 960px;
+  width: calc(100% - 4%);
+  height: 64px;
+  position: absolute;
+  top: 40px;
+  &-logo {
+    font-size: 36px;
+  }
+  .humberguer-menu {
+    position: relative;
+    width: 32px;
+    height: 64px;
+    cursor: pointer;
+    float: right;
+    span, span::before, span::after{
+      position: absolute;
+      left: 0;
+      display: block;
+      width: 32px;
+      height: 1px;
+      background: #fff;
+    }
+    span {
+      top: 50%;
+      &::after {
+        content: "";
+        top: calc(50% - 8px);
+      }
+      &::before {
+        content: "";
+        top: calc(50% + 8px);
+      }
+    }
+  }
+}
+
+.concept {
+  padding-top: 80px;
+  position: relative;
+  &-title {
+    @include sectionTitle();
+    @include bottomline();
+  }
+  &-detail {
+    @include sectionDetail();
+  }
+  &-img {
+    width: 100%;
+    height: 400px;
+    background: url(../img/concept.png) 50%;
+    margin-top: 57px;
+  }
+  &-footer {
+    position: absolute;
+    top: 580px;
+    z-index: -1;
+    width: 100%;
+    height: 240px;
+    background: #EDEDED 0% 0% no-repeat padding-box;
+  }
+}
+
+.work {
+  padding-top: 150px;
+  &-title {
+    @include sectionTitle();
+    @include bottomline();
+  }
+  &-detail {
+    @include sectionDetail();
+  }
+}
+
+.flower {
+  padding-top: 40px;
+  .content-wrapper {
+    position: relative;
+    .flower-left-top {
+      height: 560px;
+      width: 420px;
+      @include flowerText();
+      .flower-image{
+        width: 100%;
+        height: 420px;
+        background: url(../img/work_gift.png) 50%;
+      }
+      h3 {
+        font: normal normal bold 24px/40px Poppins;
+        padding-top: 16px;
+      }
+    }
+    .flower-right-top {
+      width: 420px;
+      height: 764px;
+      position: absolute;
+      right: 0;
+      top: 120px;
+      @include flowerText();
+      .flower-image {
+        height: 630px;
+        width: 100%;
+        background: url(../img/work_decoretion.png) 50%;
+      }
+      h3 {
+        font: normal normal bold 24px/40px Poppins;
+        padding-top: 16px;
+      }
+    }
+    .flower-left-down {
+      width: 420px;
+      height: 100%;
+      padding-top: 80px;
+      float: left;
+      @include flowerText();
+      .flower-image {
+        height: 630px;
+        width: 100%;
+        background: url(../img/work_wedding.png) 50%;
+      }
+      h3 {
+        font: normal normal bold 24px/40px Poppins;
+        padding-top: 16px;
+      }
+    }
+    .flower-right-down {
+      height: 100%;
+      width: 420px;
+      margin: 0 0 0 auto;
+      padding-top: 450px;
+      @include flowerText();
+      .flower-image{
+        width: 100%;
+        height: 400px;
+        background: url(../img/work_for_yourself.png) 50%;
+      }
+      h3 {
+        font: normal normal bold 24px/40px Poppins;
+        padding-top: 16px;
+      }
+    }
+  }
+}
+
+.florist {
+  clear: both;
+  margin-top: 100px;
+  position: relative;
+  &-header{
+    width: 100%;
+    height: 374px;
+    background-color: #EDEDED;
+    position: absolute;
+    z-index: -1;
+  }
+  .content-wrapper {
+    height: 651px;
+    ul {
+      padding-top: 271px;
+    }
+    .florist-title {
+      @include sectionTitle();
+      @include bottomline();
+      position: absolute;
+      top: 80px;
+      left: 0;
+      right: 0;
+    }
+    .florist-detail {
+      @include sectionDetail();
+      position: absolute;
+      top: 137px;
+      left: 0;
+      right: 0;
+    }
+
+    .florist-content {
+      width: 300px;
+      height: 340px;
+      float: left;
+      display: inline-block;
+      text-align: left;
+      &__image {
+        width: 100%;
+        max-width: 300px;
+        height: 180px;
+        clear: both;
+      }
+      .image-shiyu {
+        background: transparent url('../img/florist_shiyu.png') 0% 0% no-repeat padding-box;
+      }
+      .image-mao {
+        background: transparent url('../img/florist_mao.png') 0% 0% no-repeat padding-box;
+      }
+      .image-omi {
+        background: transparent url('../img/florist_omichan.png') 0% 0% no-repeat padding-box;
+      }
+    }
+    .pacing {
+      margin-left: 30px;
+      margin-right: 30px;
+    }
+  }
+}
+
+.information {
+  clear: both;
+  position: relative;
+  &-title {
+    @include sectionTitle();
+    @include bottomline();
+    h3 {
+      font: normal normal bold 36px/55px Poppins;
+    }
+  }
+  &-detail {
+    @include sectionDetail();
+  }
+  &-left {
+    width: 480px;
+    height: 320px;
+    float: left;
+    background: transparent url('../img/shop_information.png') 0% 0% no-repeat padding-box;
+  }
+  &-right {
+    width: 432px;
+    height: 320px;
+    float: right;
+    border: 1px dashed #707070;
+    &__info {
+      padding: 20px 0 0 40px;
+      text-align: left;
+      tr {
+        display: block;
+        padding-top: 12px;
+      }
+      th {
+        display: inline-block;
+        height: 64px;
+        width: 90px;
+        font: normal normal normal 16px/22px Myriad Pro;
+        letter-spacing: 0px;
+        color: #2B2B2B;
+        border-right: 1px solid #A0A0A0;
+      }
+      td {
+        display: inline-block;
+        height: 64px;
+        padding-left: 16px;
+      }
+      .harf-th{
+        height: 32px;
+      }
+    }
+  }
+}
+
+.contact {
+  clear: both;
+  padding-top: 120px;
+  &-title {
+    @include sectionTitle();
+    @include bottomline();
+    h3 {
+      font: normal normal bold 36px/55px Poppins;
+    }
+  }
+  &-detail {
+    @include sectionDetail();
+    height: auto;
+  }
+  .content-wrapper{
+    max-width: none;
+    height: 450px;
+    padding-top: 80px;
+    background: transparent url('../img/contact_us.png') 0% 0% no-repeat padding-box;
+    .contact-content {
+      position: relative;
+      display: inline-block;
+      letter-spacing: 2px;
+      border: 1px solid #a0a0a0;
+      background: #fff;
+      font-size: 20px;
+      margin-top: 40px;
+      span {
+        display: inline-block;
+        padding: 7% 0 0 13%;
+      }
+      &::before {
+        top: 40%;
+        left: 24%;
+        width: 28px;
+        height: 20px;
+        border: 1px solid #2b2b2b;
+        content: '';
+        position: absolute;
+        border-radius: 2px;
+      }
+      &::after {
+        top: 28%;
+        left: 25%;
+        width: 20px;
+        height: 20px;
+        border-right: 1px solid #2b2b2b;
+        border-bottom: 1px solid #2b2b2b;
+        transform: rotate(45deg);
+        content: '';
+        position: absolute;
+        border-radius: 2px;
+      }
+    }
+  }
+}
+footer {
+  span {
+    display: inline-block;
+    padding: 10px 0 10px 0;
+    font: normal normal normal 16px/22px Myriad Pro;
+    letter-spacing: 0px;
+    color: #2B2B2B;
+  }
+}
+
+.buttom {
+  width: 360px;
+  height: 80px;
+  margin: 0 auto;
+}
+
+// tablet
+@media screen and (max-width: 1024px) {
+  .flower{
+    .content-wrapper {
+      .flower-left-top {
+        margin: 0 0 0 auto;
+        text-align: center;
+      }
+      .flower-left-down {
+        margin: 0 0 0 auto;
+        float: none;
+        text-align: center;
+        padding-top: 40px;
+        .flower-image {
+          height: 600px;
+        }
+      }
+      .flower-right-top {
+        margin: 0;
+        position: static;
+        text-align: center;
+        padding-top: 40px;
+      }
+      .flower-right-down {
+        margin: 0;
+        text-align: center;
+        padding-top: 40px;
+      }
+    }
+  }
+
+  .florist {
+    .content-wrapper {
+      .florist-content {
+        width: 30%;
+      }
+      .pacing {
+        margin-left: 5%;
+        margin-right: 5%;
+      }
+    }
+  }
+  .information {
+    &-left {
+      width: 40%;
+    }
+  }
+}
+
+// smartphone
+@media screen and (max-width: 480px) {
+  @mixin smartphoneDetail {
+    width: 100%;
+    height: 100%;
+    letter-spacing: 2px;
+    text-align: left;
+    padding: 0 10px 0 10px;
+    br {
+      display: none;
+    }
+  }
+
+  header {
+    height: 355px;
+    .content-wrapper {
+      .title {
+        h1{
+          font-size: 72px;
+        }
+      }
+    }
+  }
+
+  .header {
+    top: 0;
+    &-logo {
+      font-size: 24px;
+    }
+    .humberguer-menu {
+      height: 40px;
+    }
+  }
+
+  .concept {
+    padding-top: 40px;
+    &-title {
+      font-size: 28px;
+    }
+    &-detail {
+      @include smartphoneDetail();
+    }
+  }
+
+  .work {
+    &-detail {
+      @include smartphoneDetail();
+    }
+  }
+  .flower{
+    .flower-image {
+      width: 100%;
+    }
+    .content-wrapper {
+      .flower-left-top {
+        width: 100%;
+      }
+      .flower-left-down {
+        width: 100%;
+        padding-top: 80px;
+      }
+      .flower-right-top {
+        width: 100%;
+      }
+      .flower-right-down {
+        width: 100%;
+      }
+    }
+  }
+  .florist {
+    .content-wrapper {
+      .florist-content {
+        width: 100%;
+        text-align: center;
+        &__image {
+          margin: 0 auto;
+        }
+      }
+      .pacing {
+        margin: 0;
+      }
+    }
+  }
+  .information {
+    &-left {
+      width: 100%;
+    }
+    &-right {
+      width: 100%;
+      height: auto;
+      &__info {
+        padding: 1% 0 0 5%;
+        td {
+          padding-left: 1px;
+        }
+        th {
+          width: 70px;
+        }
+        tr {
+          padding-bottom: 12px;
+        }
+      }
+    }
+  }
+  .contact {
+    padding: 0;
+    &-detail {
+      width: 90%;
+      text-align: left;
+    }
+    &-content {
+      span {
+        padding: 20px 0 0 40px;
+      }
+    }
+  }
+  .buttom {
+    width: 300px;
+    height: 65px;
+  }
+}
