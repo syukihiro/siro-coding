@@ -115,6 +115,32 @@ header {
   }
 }
 
+.fixed {
+  position: fixed;
+  top: 0;
+}
+
+.transform {
+  max-width: none;
+  width: 100%;
+  background-color: #fff;
+  color: #2b2b2b;
+  border-bottom: 1px solid #2b2b2b;
+  z-index: 2;
+  box-shadow: 0px 5px 5px -5px rgba(0,0,0,0.7);
+  span {
+    display: inline-block;
+    padding-left: 1%;
+  }
+}
+
+.backcolor {
+  margin-right: 2%;
+  span, span::before, span::after {
+    background-color: #2b2b2b !important;
+  }
+}
+
 .concept {
   padding-top: 80px;
   position: relative;
@@ -354,6 +380,7 @@ header {
     height: 450px;
     padding-top: 80px;
     background: transparent url('../img/contact_us.png') 0% 0% no-repeat padding-box;
+    background-size: cover;
     .contact-content {
       position: relative;
       display: inline-block;
@@ -546,6 +573,7 @@ footer {
     &-right {
       width: 100%;
       height: auto;
+      border: none;
       &__info {
         padding: 1% 0 0 5%;
         td {

@@ -63,6 +63,27 @@ header {
         content: "";
         top: calc(50% + 8px); }
 
+.fixed {
+  position: fixed;
+  top: 0; }
+
+.transform {
+  max-width: none;
+  width: 100%;
+  background-color: #fff;
+  color: #2b2b2b;
+  border-bottom: 1px solid #2b2b2b;
+  z-index: 2;
+  box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.7); }
+  .transform span {
+    display: inline-block;
+    padding-left: 1%; }
+
+.backcolor {
+  margin-right: 2%; }
+  .backcolor span, .backcolor span::before, .backcolor span::after {
+    background-color: #2b2b2b !important; }
+
 .concept {
   padding-top: 80px;
   position: relative; }
@@ -336,7 +357,8 @@ header {
     max-width: none;
     height: 450px;
     padding-top: 80px;
-    background: transparent url("../img/contact_us.png") 0% 0% no-repeat padding-box; }
+    background: transparent url("../img/contact_us.png") 0% 0% no-repeat padding-box;
+    background-size: cover; }
     .contact .content-wrapper .contact-content {
       position: relative;
       display: inline-block;
@@ -469,7 +491,8 @@ footer span {
     width: 100%; }
   .information-right {
     width: 100%;
-    height: auto; }
+    height: auto;
+    border: none; }
     .information-right__info {
       padding: 1% 0 0 5%; }
       .information-right__info td {
