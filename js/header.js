@@ -22,6 +22,14 @@ $(window).scroll(function(){
 $(function(){
   $(".menu").on('click', function() {
     $(this).toggleClass('active');
+    $(".inner").toggleClass('open');
     return false;
   })
-})
+});
+
+$(function(){
+  $("li").on('click', function() {
+    $(".menu").removeClass('active');
+    $(".inner").removeClass('open');
+  })
+});
