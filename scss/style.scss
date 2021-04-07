@@ -509,8 +509,10 @@ footer {
 
   .header {
     top: 0;
+    height: 50px;
     &-logo {
       font-size: 24px;
+      padding-top: 2%;
     }
     .humberguer-menu {
       height: 40px;

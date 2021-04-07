@@ -439,9 +439,11 @@ footer span {
       font-size: 72px; }
 
   .header {
-    top: 0; }
+    top: 0;
+    height: 50px; }
     .header-logo {
-      font-size: 24px; }
+      font-size: 24px;
+      padding-top: 2%; }
     .header .humberguer-menu {
       height: 40px; }
 
