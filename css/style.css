@@ -54,7 +54,8 @@ header {
       width: 32px;
       height: 1px;
       background: #fff;
-      cursor: pointer; }
+      cursor: pointer;
+      transition: all .5s; }
     .header .humberguer-menu span {
       top: 50%; }
       .header .humberguer-menu span::after {
