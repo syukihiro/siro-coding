@@ -112,6 +112,17 @@ header {
         top: calc(50% + 8px);
       }
     }
+    .active {
+      -webkit-transform: translateY(0) rotate(45deg);
+      transform: translateY(0) rotate(45deg);
+      &::before {
+        opacity: 0;
+      }
+      &::after {
+      -webkit-transform: translateY(8px) rotate(-86deg);
+      transform: translateY(8px) rotate(-86deg);
+      }
+    }
   }
 }
 
@@ -516,6 +527,9 @@ footer {
     }
     .humberguer-menu {
       height: 40px;
+      span {
+        top: 60%;
+      }
     }
   }
 

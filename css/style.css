@@ -62,6 +62,14 @@ header {
       .header .humberguer-menu span::before {
         content: "";
         top: calc(50% + 8px); }
+    .header .humberguer-menu .active {
+      -webkit-transform: translateY(0) rotate(45deg);
+      transform: translateY(0) rotate(45deg); }
+      .header .humberguer-menu .active::before {
+        opacity: 0; }
+      .header .humberguer-menu .active::after {
+        -webkit-transform: translateY(8px) rotate(-86deg);
+        transform: translateY(8px) rotate(-86deg); }
 
 .fixed {
   position: fixed;
@@ -446,6 +454,8 @@ footer span {
       padding-top: 2%; }
     .header .humberguer-menu {
       height: 40px; }
+      .header .humberguer-menu span {
+        top: 60%; }
 
   .concept {
     padding-top: 40px; }

@@ -18,3 +18,10 @@ $(window).scroll(function(){
     $('.humberguer-menu').removeClass('backcolor');
   }
 });
+
+$(function(){
+  $(".menu").on('click', function() {
+    $(this).toggleClass('active');
+    return false;
+  })
+})
