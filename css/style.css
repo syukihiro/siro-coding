@@ -80,19 +80,15 @@ header {
   opacity: 0;
   transform: translate(0, 45px);
   transition: all 1s;
-  z-index: 3; }
+  z-index: 3;
+  background-color: #fff; }
   .inner ul {
     list-style: none;
     text-align: center; }
     .inner ul li {
       display: block;
-      background-color: #fff;
-      width: 70%;
-      margin: 0 auto;
-      font-size: 23px;
-      border-radius: 65%;
-      padding: 2.5%;
-      margin-top: 1.5%; }
+      width: 100%;
+      padding: 2.5%; }
 
 .open {
   opacity: 1; }
@@ -488,7 +484,7 @@ footer span {
     .concept-title {
       font-size: 28px; }
     .concept-detail {
-      width: 100%;
+      width: 90%;
       height: 100%;
       letter-spacing: 2px;
       text-align: left;
@@ -497,7 +493,7 @@ footer span {
         display: none; }
 
   .work-detail {
-    width: 100%;
+    width: 90%;
     height: 100%;
     letter-spacing: 2px;
     text-align: left;
@@ -507,6 +503,9 @@ footer span {
 
   .flower .flower-image {
     width: 100%; }
+  .flower-title {
+    width: 90%;
+    margin: 0 auto; }
   .flower .content-wrapper .flower-left-top {
     width: 100%; }
   .flower .content-wrapper .flower-left-down {

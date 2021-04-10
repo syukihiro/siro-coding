@@ -137,18 +137,14 @@ header {
   transform : translate(0, 45px);
   transition : all 1s;
   z-index: 3;
+  background-color: #fff;
   ul{
     list-style: none;
     text-align: center;
     li {
       display: block;
-      background-color: #fff;
-      width: 70%;
-      margin: 0 auto;
-      font-size: 23px;
-      border-radius: 65%;
+      width: 100%;
       padding: 2.5%;
-      margin-top: 1.5%;
     }
   }
 }
@@ -528,7 +524,7 @@ footer {
 // smartphone
 @media screen and (max-width: 480px) {
   @mixin smartphoneDetail {
-    width: 100%;
+    width: 90%;
     height: 100%;
     letter-spacing: 2px;
     text-align: left;
@@ -582,6 +578,10 @@ footer {
   .flower{
     .flower-image {
       width: 100%;
+    }
+    &-title {
+      width: 90%;
+      margin: 0 auto;
     }
     .content-wrapper {
       .flower-left-top {
